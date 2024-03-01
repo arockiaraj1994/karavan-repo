@@ -1,0 +1,20 @@
+- route:
+    id: route-7185
+    nodePrefixId: route-9e5
+    from:
+      id: from-2c25
+      uri: kamelet:sftp-source
+      variableReceive: undefined
+      parameters:
+        connectionHost: localhost
+        connectionPort: '22'
+        username: arockiaraj
+        password: AROCraj@1991
+        directoryName: /Documents
+        idempotent: true
+      steps:
+        - log:
+            id: log-ec22
+            message: ${body}
+- routeConfiguration:
+    id: test-id
